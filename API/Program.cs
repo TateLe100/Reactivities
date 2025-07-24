@@ -13,13 +13,18 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-
+// allows calls from frontend 
+builder.Services.AddCors();
 
 // DONT NEED THIS 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 // builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
+// also needed
+app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod()
+    .WithOrigins("http://localhost:3000", "https://localhost:3000"));
 
 // DONT NEED THIS STUFF 
 // Configure the HTTP request pipeline.
