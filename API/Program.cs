@@ -1,3 +1,5 @@
+using Application.Activities.Queries;
+using Application.Core;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.EntityFrameworkCore;
 using Presistence;
@@ -15,6 +17,10 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 
 // allows calls from frontend 
 builder.Services.AddCors();
+builder.Services.AddMediatR(x =>
+    x.RegisterServicesFromAssemblyContaining<GetActivityList.Handler>());
+
+builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 
 // DONT NEED THIS 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
