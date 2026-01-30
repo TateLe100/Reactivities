@@ -29,8 +29,10 @@ The app allows users to create, view, edit, and manage activities with authentic
 - React Router
 
 
-### Installation Instructions
-Backend Setup
+## 🧑‍💻 Installation Instructions
+Follow the steps below to run the application locally.
+
+Backend Setup 
 1. cd API
 2. dotnet restore
 3. dotnet tool install --global dotnet-ef
@@ -41,9 +43,8 @@ Frontend Setup
 1. cd client
 2. npm install
 3. npm start
-
+   
 ## 📸 Screenshots 
-
 ### Activity Dashboard
 ![Activity Dashboard](./screenshots/Dashboard.png)
 
