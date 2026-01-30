@@ -28,6 +28,20 @@ The app allows users to create, view, edit, and manage activities with authentic
 - Axios
 - React Router
 
+
+### Installation Instructions
+Backend Setup
+1. cd API
+2. dotnet restore
+3. dotnet tool install --global dotnet-ef
+4. dotnet ef database update
+5. dotnet run 
+
+Frontend Setup
+1. cd client
+2. npm install
+3. npm start
+
 ## 📸 Screenshots 
 
 ### Activity Dashboard
